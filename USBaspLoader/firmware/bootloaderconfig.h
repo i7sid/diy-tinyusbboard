@@ -84,13 +84,13 @@ these macros are defined, the boot loader usees them.
  * to interrupt pin INT0!
  */
 #ifndef JUMPER_PORT
-  #define JUMPER_PORT		C	/* was USB_CFG_INTPORT_BIT */
+  #define JUMPER_PORT		C	/* was USB_CFG_INTPORT_BIT in matrixstorm.com version*/
 #endif
 /* 
  * jumper is connected to this port
  */
 #ifndef JUMPER_BIT
-  /* This is Revision 3 and later (where PD6 and PD7 were swapped */
+  /* Swaped JUMPER from PD6 to PC3 */
   #define JUMPER_BIT           3       /* rev3-smd was 3 */
 #endif
 /* 
