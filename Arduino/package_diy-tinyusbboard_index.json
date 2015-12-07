@@ -1,0 +1,27 @@
+{
+	"packages": [
+		{
+			"name": "DIY-PersonalFabrication",
+			"maintainer": "",
+			"websiteURL": "https://www7.cs.fau.de/de/teaching/diy-2015w/",
+			"email": "valentin@fablab.fau.de",
+
+			"platforms": [
+				{
+					"name": "diy-tinyusbboard",
+					"architecture": "avr",
+					"version": "1.0",
+					"category": "DIY",
+					"url": "https://github.com/i7sid/diy-tinyusbboard/raw/master/Arduino/diy-tinyusbboard.zip",
+					"archiveFileName": "diy-tinyusbboard.zip",
+					"checksum": "MD5:3168f04bd71d60af1bbb3a747dc3e137",
+					"size": "6237",
+					"boards": [
+						{"name": "diy-tinyusbboard"}
+					],
+					"toolsDependencies": []
+				}
+			]
+		}
+	]
+} 

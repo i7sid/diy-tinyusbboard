@@ -1,4 +1,4 @@
-y /*
+ /*
   test_tinyusbboard
   Connect a led to every digital and analog pin on your diy-tinyusbboard.
   This sketch runs a light from digital 0 to analog 5 to check solderconnections.
