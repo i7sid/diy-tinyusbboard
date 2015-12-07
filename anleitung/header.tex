@@ -1,0 +1,36 @@
+\newcommand{\basedir}{fablab-document}
+\documentclass{\basedir/fablab-document}
+
+% \usepackage{fancybox} %ovale Boxen für Knöpfe - nicht mehr benötigt
+\usepackage{amssymb} % Symbole für Knöpfe
+\usepackage{subfigure,caption}
+\usepackage{eurosym}
+\usepackage{tabularx} % Tabellen mit bestimmtem Breitenverhältnis der Spalten
+\usepackage{wrapfig} % Textumlauf um Bilder
+
+\renewcommand{\texteuro}{\euro}
+
+\definecolor{dunkelgruen}{rgb}{0,0.4,0}
+
+\newcommand{\img}[2]{
+	\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=1.5]{images/#1}
+	\caption{#2}%
+	\end{figure}}
+	
+\newcommand\circlearound[1]{%
+  \tikz[baseline]\node[draw,shape=circle,anchor=base] {#1} ;}
+	
+\newcounter{ueberpunkte}
+\setcounter{ueberpunkte}{1}
+\renewcommand{\labelenumi}{\circlearound{\theueberpunkte}\stepcounter{ueberpunkte}}
+
+\linespread{1.2}
+
+\date{2014}
+
+\fancyfoot[C]{kontakt@fablab.fau.de}
+\title{DIY tinyUSBboard}
+
+\begin{document}

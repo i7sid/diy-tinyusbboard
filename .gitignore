@@ -3,7 +3,6 @@ layout/*.*#*
 # LaTeX
 *.log
 *.out
-*.pdf
 *.aux
 *.synctex.gz
 

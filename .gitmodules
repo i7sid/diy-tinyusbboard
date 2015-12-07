@@ -1,0 +1,3 @@
+[submodule "anleitung/fablab-document"]
+	path = anleitung/fablab-document
+	url = git@github.com:fau-fablab/fablab-document.git
