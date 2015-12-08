@@ -50,5 +50,18 @@ Erst wenn alle andere Komponenten mit Ausnahme der Stiftleisten verlötet sind w
 Nachdem der Sockel verbaut ist werden zuletzt die Stiftleisten von der Unterseite bestückt und auf der Kupferseite verlötet.
 
 
+\section{tinyUSBboard in Arduino IDE}
+Um das DIY tinyUSBboard in der Arduino IDE verwenden zu können ist eine aktuelle Arduino IDE vorausgesetzt. In der Arduino IDE die Einstellungen öffnen \enquote{File $\rightarrow$ Preferences} und in das Feld \enquote{Additional Boards Manager URLs} die URL \url{https://github.com/i7sid/diy-tinyusbboard/raw/master/Arduino/package_diy-tinyusbboard_index.json} kopieren. Unter \enquote{Tools $\rightarrow$ Board $\rightarrow$ Boards Manager} den Boards Manager aufrufen, den Eintrag diy-tinyusbboard auswählen und \enquote{Install} klicken. Jetzt kann das diy-tinyusbboard ausgewählt werden \enquote{Tools $\rightarrow$ Board $\rightarrow$ DIY tinyUSBboard (USBaspLoader ATmega88p at 16MHz)}.\footnote{Für Windows muss zusätzlich ein Treiber für USBasp installiert werden. \url{http://www.fischl.de/usbasp/}}
+\image{boards-manager.png}{tinyUSBboard im Boards Manager}
+\subsection{Bootloader flashen}
+Zum flashen des Bootloaders muss das tinyUSBboard an einen AVR ISP\footnote{z.B. Atmel AVRISP mkII oder USBasp} angeschlossen werden. Je nach ISP muss das Board noch z.B. über die USB-Buchse mit Spannung versorgt werden.
+\img{prog.pdf}{ISP an das tinyUSBboard anschließen}
+
+Wenn in der Arduino IDE das richtige Board ausgewählt ist muss noch der verwendete ISP eingestellt werden \enquote{Tools $\rightarrow$ Programmer}. Jetzt kann mit \enquote{Tools $\rightarrow$ Burn Bootloader} der Bootloader auf das DIY tinyUSBboard geflasht werden.
+
+\subsection{Sketch auf das Board flashen}
+Um das tinyUSBboard in den Programmiermodus zu bringen muss der \textbf{P}-Taster gedrückt werden, während der \textbf{R}-Taster losgelassen wird. Das tinyUSBboard meldet sich jetzt als USBasp ISP am Computer an und lässt sich in der Arduino IDE mit \enquote{Sketch $\rightarrow$ Upload} programmieren. Wenn die Arduino IDE \enquote{Done uploading.} angezeigt wird, kann der Programmablauf durch Drücken einer der Tasten gestartet werden. 
+\image{pinout.pdf}{Arduino PIN-Namen}
+
 
 
