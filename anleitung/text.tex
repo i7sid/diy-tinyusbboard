@@ -39,16 +39,16 @@ Auf dem tinyUSBboard kommen eine grüne und zwei rote LEDs zum Einsatz.
 \img{led-farbe.pdf}{Farben der LEDs}
 \newpage
 Die Kathode einer LED ist rückseitig, wie auf dem Schaltplan, mit einem Quadrat markiert.
-\img{led-orientierung.pdf}{Markierung der Kathode}
+\img{led-orientierung.pdf}{Markierung der Kathode im Bestückungsdruck und auf der \textbf{Rückseite} der LED}
 
 \subsection{THT}
 Nachdem alle SMD Komponenten verlötet sind werden die beiden Taster auf der Kupferseite verbaut.
 Danach Oszillator, PTC-Widerstand und USB-Buchse; diese drei Komponenten werden von der Rückseite der Platine bestückt und auf der Kupferseite verlötet.
 \img{tht.pdf}{Position THT Komponenten}
 
-Erst wenn alle andere Komponenten mit Ausnahme der Stiftleisten verlötet sind wird der Sockel eingesetzt. Wenn nur die Löcher in den 4 Ecken gebohrt wurden müssen vor dem Löten die übrigen Pins gleichmäßig gekürzt werden.
-Nachdem der Sockel verbaut ist werden zuletzt die Stiftleisten von der Unterseite bestückt und auf der Kupferseite verlötet.
-
+Erst wenn alle andere Komponenten mit Ausnahme der Stiftleisten verlötet sind wird der Sockel eingesetzt. Wenn nur die Löcher in den 4 Ecken gebohrt wurden müssen vor dem Löten die übrigen Pins gleichmäßig gekürzt werden. Der Sockel besitzt auf einer der Stirnseiten eine Kerbe, diese dient zur späteren Orientierung des ATmega88-PA und sollte zu den Tastern zeigen.
+Nachdem der Sockel verbaut ist werden zuletzt die Stiftleisten von der Unterseite bestückt und auf der Kupferseite verlötet.\\
+Jetzt kann der ATmega88PA in das Board eingesetzt werden. In einer Ecke ist ein Punkt für Pin 1 (Reset) eingeprägt, dieser muss zu den Tastern zeigen.
 
 \section{tinyUSBboard in Arduino IDE}
 Um das DIY tinyUSBboard in der Arduino IDE verwenden zu können ist eine aktuelle Arduino IDE vorausgesetzt. In der Arduino IDE die Einstellungen öffnen \enquote{File $\rightarrow$ Preferences} und in das Feld \enquote{Additional Boards Manager URLs} die URL \url{https://github.com/i7sid/diy-tinyusbboard/raw/master/Arduino/package_diy-tinyusbboard_index.json} kopieren. Unter \enquote{Tools $\rightarrow$ Board $\rightarrow$ Boards Manager} den Boards Manager aufrufen, den Eintrag diy-tinyusbboard auswählen und \enquote{Install} klicken. Jetzt kann das diy-tinyusbboard ausgewählt werden \enquote{Tools $\rightarrow$ Board $\rightarrow$ DIY tinyUSBboard (USBaspLoader ATmega88p at 16MHz)}.\footnote{Für Windows muss zusätzlich ein Treiber für USBasp installiert werden. \url{http://www.fischl.de/usbasp/}}
