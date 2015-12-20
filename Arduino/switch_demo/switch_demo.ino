@@ -5,9 +5,8 @@
 
 // the setup function runs once when you press reset or power the board
 void setup() {
-  // initialize digital pin 13 as an output.
-  pinMode(8, OUTPUT);
-  pinMode(A3, INPUT);
+  pinMode(8, OUTPUT);           // initialize digital pin 8 as an output.
+  pinMode(A3, INPUT);           // initialize analog pin 3 as an input.
   digitalWrite(A3, HIGH);       // turn on pullup resistors
 }
 
@@ -24,7 +23,7 @@ void loop() {
     else
       digitalWrite(8, LOW);    // turn the LED off by making the voltage LOW
 
-    delay(200);
+    delay(200);                //delay 200ms
 
     while(!digitalRead(A3))
     {
